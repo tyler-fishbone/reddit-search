@@ -1,3 +1,7 @@
+
+
+
+
 .App {
   text-align: center;
 }
@@ -11,6 +15,7 @@
   background-color: #222;
   height: 150px;
   padding: 20px;
+  margin-bottom: 30px;
   color: white;
 }
 
@@ -20,9 +25,35 @@
 
 .App-intro {
   font-size: large;
+  margin: 10px;
 }
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.reddit-search-form {
+  margin: 20px;
+}
+
+
+.reddit-search-results {
+  width: 60%;
+  margin: auto;
+  border: 1px solid black;
+}
+
+.reddit-search-results ul {
+  padding: 20px;
+  margin: auto;
+  width: 400px;
+}
+
+.reddit-search-results ul li {
+  padding: 10px;
+}
+
+.reddit-search-results ul li img {
+  max-width: 400px;
 }

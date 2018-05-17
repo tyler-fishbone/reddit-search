@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import MainHeader from './MainHeader/MainHeader'
 import SearchForm from './SearchForm/SearchForm'
+import SearchResultList from './SearchResultList/SearchResultList'
 
 import './App.css';
 
@@ -21,7 +22,14 @@ class App extends Component {
         </p>
         <SearchForm setAppState={this.setState.bind(this)}/>
 
-        
+        {
+          this.state.results ?
+          <SearchResultList results={this.state.results}/>
+          :
+          undefined
+        }
+
+
       </div>
     );
   }
