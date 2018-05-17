@@ -17,9 +17,11 @@ class App extends Component {
       <div className="App">
         <MainHeader/>
         <p className="App-intro">
-          Tyler's first react front-end.
+          Search for reddit boards below.
         </p>
-        <SearchForm/>
+        <SearchForm setAppState={this.setState.bind(this)}/>
+
+        
       </div>
     );
   }

@@ -5,8 +5,8 @@ class SearchForm extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      searchFormBoard = '',
-      searchFormLimit = 0,
+      searchFormBoard: '',
+      searchFormLimit: '',
     }
 
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -25,6 +25,28 @@ class SearchForm extends Component {
   }
 
   render() {
-    
+    return (
+      <div className="reddit-search-form">
+        <form onSubmit={this.handleSubmit}>
+          <input 
+            type="text"
+            placeholder="Enter a reddit board"
+            name="searchFormBoard"
+            value={this.state.searchFormBoard}
+            onChange={this.handleChange}
+            />
+          <input
+            type="number"
+            placeholder="Number of listings"
+            name="searchFormLimit"
+            value={this.state.searchFormLimit}
+            onChange={this.handleChange}
+            />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    )
   }
 }
+
+export default SearchForm
