@@ -14,7 +14,8 @@ export default class SearchResultList extends Component {
       <ul>
         <li><h2>{child.data.title}</h2></li>
         <li><p>Posted by:{child.data.author}</p></li>
-        <li><img src={child.data.url} /></li>
+        <li><img src={child.data.thumbnail} /></li>
+        <li><a href={`http://reddit.com${child.data.permalink}`}>Link to post</a></li>
       </ul>
     )
     return (
